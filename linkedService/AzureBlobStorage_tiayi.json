@@ -1,0 +1,13 @@
+{
+	"name": "AzureBlobStorage_tiayi",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "linked service to tiayistorageaccount",
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=tiayistorageaccount;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIjE5MDgxNi1URVNUREFUQUZBQ1RPUllfZTZiMzFkNGItOGI3ZS00OGEyLWJhNjAtYjNjMjI5NTMxZWJiIg0KfQ=="
+		}
+	}
+}
