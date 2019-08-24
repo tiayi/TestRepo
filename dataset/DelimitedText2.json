@@ -2,15 +2,15 @@
 	"name": "DelimitedText2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "dataflowsink",
+			"referenceName": "AzureBlobStorage_tiayi",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileSystem": "adftestblob"
+				"type": "AzureBlobStorageLocation",
+				"container": "adftestblob"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
