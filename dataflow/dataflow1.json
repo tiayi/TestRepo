@@ -32,7 +32,7 @@
 					"name": "Select1"
 				}
 			],
-			"script": "\n\nsource(output(\n\t\tQuery as string,\n\t\tTitleUrl2 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> source2\nSelect1 aggregate(groupBy(Query,\n\t\tTitle),\n\tUrl = first(Url)) ~> Aggregate1\nsource2 derive(Title = split(TitleUrl2,' ')[0],\n\t\tUrl = split(TitleUrl2,' ')[1]) ~> DerivedColumn1\nDerivedColumn1 select(mapColumn(\n\t\tQuery,\n\t\tTitle,\n\t\tUrl\n\t)) ~> Select1\nAggregate1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> sink1"
+			"script": "\n\nsource(output(\n\t\tQuery as string,\n\t\tTitleUrl2 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> source2\nSelect1 aggregate(groupBy(Query,\n\t\tTitle),\n\tUrl = first(Url)) ~> Aggregate1\nsource2 derive(Title = split(TitleUrl2,' ')[0],\n\t\tUrl = split(TitleUrl2,' ')[1]) ~> DerivedColumn1\nDerivedColumn1 select(mapColumn(\n\t\tQuery,\n\t\tTitleUrl2,\n\t\tTitle,\n\t\tUrl\n\t)) ~> Select1\nAggregate1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> sink1"
 		}
 	}
 }
